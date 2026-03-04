@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PHU QUOC · PRIVATE FAMILY COLLECTION</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+TC:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    color:#eae7df;
+    font-family:'Noto Sans TC',sans-serif;
+    overflow-x:hidden;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:64px;
+    letter-spacing:8px;
+    color:#d4af37;
+    margin:0;
+}
+
+.hero p{
+    margin-top:20px;
+    letter-spacing:4px;
+    color:#cbb27c;
+}
+
+.tagline{
+    margin-top:30px;
+    font-style:italic;
+    color:#aaa;
+    max-width:600px;
+}
+
+.section{
+    padding:120px 12%;
+    border-bottom:1px solid #111;
+}
+
+.section h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:42px;
+    text-align:center;
+    color:#d4af37;
+    margin-bottom:80px;
+    letter-spacing:4px;
+}
+
+.day{
+    margin-bottom:120px;
+    opacity:0;
+    transform:translateY(60px);
+    transition:all 1s ease;
+}
+
+.day.visible{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.day h3{
+    font-family:'Cormorant Garamond',serif;
+    color:#bfa46f;
+    font-size:26px;
+    margin-bottom:30px;
+    letter-spacing:3px;
+}
+
+ul{
+    list-style:none;
+    padding:0;
+}
+
+li{
+    margin:15px 0;
+    font-size:17px;
+    letter-spacing:1px;
+}
+
+.footer{
+    text-align:center;
+    padding:80px 20px;
+    color:#777;
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>PHU QUOC</h1>
+    <p>KING · GRACE · YUKI · CRYSTAL · APPLE · YIJUN</p>
+    <div class="tagline">
+        Some journeys are measured in miles.<br>
+        Ours will be measured in memories.
+    </div>
+</div>
+
+<div class="section">
+<h2>ITINERARY · MARCH 20 — 25, 2026</h2>
+
+<div class="day">
+<h3>DAY I · ARRIVAL</h3>
+<ul>
+<li>12:30 桃園機場集合</li>
+<li>14:40 起飛</li>
+<li>17:40 抵達富國島</li>
+<li>入住 Regent Resort</li>
+<li>晚餐 · Meo 越南料理</li>
+<li>楊東夜市散步</li>
+</ul>
+</div>
+
+<div class="day">
+<h3>DAY II · REGENT LEISURE</h3>
+<ul>
+<li>09:00 早餐</li>
+<li>Yoga · Beach · Pool</li>
+<li>午餐 · Rice Market</li>
+<li>夕陽晚餐 · Ocean Club</li>
+<li>金剛超市採買</li>
+</ul>
+</div>
+
+<div class="day">
+<h3>DAY III · SAFARI & GRAND WORLD</h3>
+<ul>
+<li>珍珠動物園</li>
+<li>珍珠遊樂園</li>
+<li>深海餐廳午餐</li>
+<li>Grand World 貢多拉夕陽</li>
+<li>鮮魚火鍋</li>
+<li>入住 New World Resort</li>
+</ul>
+</div>
+
+<div class="day">
+<h3>DAY IV · SUN WORLD EXPERIENCE</h3>
+<ul>
+<li>Sunset Town</li>
+<li>RuNam 午餐</li>
+<li>跨海纜車 · Hon Thom</li>
+<li>Sun World 探索</li>
+<li>Camia 晚餐</li>
+<li>煙火夜景</li>
+</ul>
+</div>
+
+<div class="day">
+<h3>DAY V · RESORT ESCAPE</h3>
+<ul>
+<li>私人沙灘</li>
+<li>泳池時光</li>
+<li>海鮮 / 義式午餐</li>
+<li>Spa Ritual</li>
+</ul>
+</div>
+
+<div class="day">
+<h3>DAY VI · FAREWELL</h3>
+<ul>
+<li>早餐</li>
+<li>文創小店</li>
+<li>海景午餐</li>
+<li>18:40 起飛</li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer">
+PHU QUOC 2026 · A PRIVATE LUXURY FAMILY COLLECTION
+</div>
+
+<script>
+const sections = document.querySelectorAll(".day");
+window.addEventListener("scroll", () => {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100){
+            section.classList.add("visible");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
